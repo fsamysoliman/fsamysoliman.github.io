@@ -58,25 +58,27 @@
       text-decoration: underline;
     }
 
-    /* Headshot: circular, fixed size */
-    .headshot-wrapper {
-      text-align: center; /* center the image */
+    /* ===== Updated Intro Section ===== */
+    .intro-section {
+      display: flex;
+      align-items: flex-start;
       margin-bottom: 1.5rem;
     }
 
     .headshot {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      display: inline-block;
       border: 2px solid #ddd;
+      margin-right: 1rem;
+      flex-shrink: 0;
     }
 
-    /* Main intro paragraph */
     .intro {
-      margin-bottom: 1.5rem;
       font-size: 1rem;
+      line-height: 1.6;
+      color: #222;
     }
 
     .intro a {
@@ -88,7 +90,7 @@
       text-decoration: underline;
     }
 
-    /* Section headings (e.g., Publications, Working Papers) */
+    /* Section headings (e.g., Papers) */
     h2 {
       margin-top: 2rem;
       margin-bottom: 0.75rem;
@@ -124,6 +126,22 @@
       color: #555;
       text-align: center;
     }
+    footer a {
+      color: #0366d6;
+      text-decoration: none;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    /* X‐icon styling */
+    .x-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      fill: currentColor;
+    }
   </style>
 </head>
 
@@ -131,7 +149,7 @@
   <div class="container">
     <!-- ===== Header with name on left, “Home | CV” on right ===== -->
     <header>
-      <h1>Your Name</h1>
+      <h1>Felix Samy Soliman</h1>
       <nav>
         <!-- Since this is a single‐page site, “Home” just links to “#” -->
         <a href="#">Home</a>
@@ -140,77 +158,87 @@
       </nav>
     </header>
 
-    <!-- ===== Headshot ===== -->
-    <div class="headshot-wrapper">
-      <!-- Upload your image as “headshot.jpg” (or change filename) -->
+    <!-- ===== Intro section with headshot on the left ===== -->
+    <div class="intro-section">
       <img
         src="headshot.jpg"
-        alt="Your Name"
+        alt="Felix Samy Soliman"
         class="headshot"
       />
+      <div class="intro">
+        <p>
+          I am a PhD student in Economics at the
+          <a href="https://www.econ.uzh.ch/en.html" target="_blank">University of Zurich</a>.
+          My research focuses on macroeconomics, environmental economics, and trade.
+          <br /><br />
+          You can download my CV
+          <a href="cv.pdf" target="_blank">here</a>. Feel free to
+          reach me at 
+          <a href="mailto:felix.samysoliman@econ.uzh.ch">felix.samysoliman@econ.uzh.ch</a>.
+        </p>
+      </div>
     </div>
 
-    <!-- ===== Intro paragraph (1–2 sentences) ===== -->
-    <p class="intro">
-      I am a PhD student in Economics at the University of Zurich. My research
-      focuses on macroeconomics, environmental economics and trade.
-      <br /><br />
-      You can download my CV
-      <a href="cv.pdf" target="_blank">here</a>. Feel free to
-      reach me at 
-      <a href="mailto:felix.samysoliman@econ.uzh.ch"
-        >felix.samysoliman@econ.uzh.ch</a
-      >.
-    </p>
-<!-- ===== Papers Section ===== -->
-<h2>Papers</h2>
-<ul class="pub-list">
-  <!-- 1. Work in progress (sole authored) -->
-  <li>
-	<p>Capital Replacement and the Demand for Clean Technology  - 2025</p>
-	<p>[Work in Progress]</p>
-  </li>
+    <!-- ===== Papers Section ===== -->
+    <h2>Papers</h2>
+    <ul class="pub-list">
+      <!-- 1. Work in progress (sole authored) -->
+      <li>
+        Capital Replacement and the Demand for Clean Technology – 2025  
+        <br />
+        [Work in Progress]
+      </li>
 
-  <!-- 2. NBER Working Paper (2024) -->
-  <li>
-    <p> Slack and Economic Development - 2024 
-    joint with 
-    <a href="https://www.michaelwwalker.me/" target="_blank">Michael W. Walker</a>, 
-    <a href="https://www.nber.org/people/nachiket_shah?page=1&amp;perPage=50" target="_blank">Nachiket Shah</a>, 
-    <a href="https://emiguel.econ.berkeley.edu/" target="_blank">Edward Miguel</a>, 
-    <a href="https://www.dennisegger.net/" target="_blank">Dennis Egger</a>, and 
-    <a href="https://tilmangraff.github.io/" target="_blank">Tilman Graff</a>,  
-    <a href="https://www.nber.org/papers/w33055" target="_blank">[NBER Working Paper]</a>
-  </li>
+      <!-- 2. NBER Working Paper (2024) -->
+      <li>
+        Slack and Economic Development – 2024  
+        <br />
+        joint with 
+        <a href="https://www.michaelwwalker.me/" target="_blank">Michael W. Walker</a>, 
+        <a href="https://www.nber.org/people/nachiket_shah?page=1&amp;perPage=50" target="_blank">Nachiket Shah</a>, 
+        <a href="https://emiguel.econ.berkeley.edu/" target="_blank">Edward Miguel</a>, 
+        <a href="https://www.dennisegger.net/" target="_blank">Dennis Egger</a>, and 
+        <a href="https://tilmangraff.github.io/" target="_blank">Tilman Graff</a>  
+        <br />
+        <a href="https://www.nber.org/papers/w33055" target="_blank">NBER Working Paper, 2024</a>
+      </li>
 
-  <!-- 3. Dropbox‐hosted working paper (2025) -->
-  <li>
-    <p> The Geographic Leakages of Environmental Regulations: Evidence from the Clean Air Act - 2025 <p>
- 	joint with 
-    <a href="https://www.mark-curtis.net/" target="_blank">Mark Curtis</a>, 
-    <a href="https://weiting-miao.github.io/" target="_blank">Weiting Miao</a>, 
-    <a href="https://jcsuarez.com/" target="_blank">Juan Carlos Suarez Serrato</a>, and 
-    <a href="https://sites.google.com/site/yixusite/" target="_blank">Daniel Xu</a>)  
-    [PDF]  
-    <a href="https://www.dropbox.com/scl/fi/66egddln357pbzr5ghvll/Curtis-Miao-Soliman-Serrato-Xu.pdf?rlkey=7dfniqgoqafbxi16xmu1zkfhc&amp;e=1&amp;dl=0" target="_blank">[Preliminary Draft]  
+      <!-- 3. Dropbox‐hosted working paper (2025) -->
+      <li>
+        The Geographic Leakages of Environmental Regulations: Evidence from the Clean Air Act – 2025  
+        <br />
+        joint with 
+        <a href="https://www.mark-curtis.net/" target="_blank">Mark Curtis</a>, 
+        <a href="https://weiting-miao.github.io/" target="_blank">Weiting Miao</a>, 
+        <a href="https://jcsuarez.com/" target="_blank">Juan Carlos Suarez Serrato</a>, and 
+        <a href="https://sites.google.com/site/yixusite/" target="_blank">Daniel Xu</a>  
+        <br />
+        <a href="https://www.dropbox.com/scl/fi/66egddln357pbzr5ghvll/Curtis-Miao-Soliman-Serrato-Xu.pdf?rlkey=7dfniqgoqafbxi16xmu1zkfhc&amp;e=1&amp;dl=0" target="_blank">
+          [Preliminary Draft]
+        </a>
+      </li>
 
-    </a>
-  </li>
-
-  <!-- 4. 2018 Journal Article (based on Bachelor Thesis) -->
-  <li>
-    <p> Democratization, contracts and comparative advantage - 2018 <p>
-    <p> joint with Jan Schymik <p>  
-    <a href="https://www.sciencedirect.com/science/article/pii/S0165176518303847?casa_token=2OmSerL5s9gAAAAA:F_zwHdMuGMSWWaSZWWSMgF9LeehhJDyEjz0V_3u4kU-i3Rh0KvaBZcoqUYSRo2VElOxniES6HFc" target="_blank">
-      [Journal Article] [Based on Bachelor Thesis] 
-    </a>
-  </li>
-</ul>
-
+      <!-- 4. 2018 Journal Article (based on Bachelor Thesis) -->
+      <li>
+        Democratization, contracts and comparative advantage – 2018  
+        <br />
+        joint with Jan Schymik  
+        <br />
+        [Based on Bachelor Thesis]  
+        <a href="https://www.sciencedirect.com/science/article/pii/S0165176518303847?casa_token=2OmSerL5s9gAAAAA:F_zwHdMuGMSWWaSZWWSMgF9LeehhJDyEjz0V_3u4kU-i3Rh0KvaBZcoqUYSRo2VElOxniES6HFc" target="_blank">
+          [Journal Article]
+        </a>
+      </li>
+    </ul>
 
     <!-- ===== Footer ===== -->
     <footer>
       &copy; 2025 Felix Samy Soliman
+      <a href="https://x.com/home" target="_blank" aria-label="X">
+        <svg class="x-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6 L6 18 M6 6 L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
     </footer>
   </div>
 </body>
