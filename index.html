@@ -2,15 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Felix Samy Soliman</title>
 
-  <!-- === Minimal CSS to mimic xx style === -->
   <style>
-    /* Reset some defaults */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -19,21 +14,18 @@
 
     html, body {
       font-family: -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Roboto, Helvetica, Arial,
-        sans-serif;
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: #222;
       background-color: #fff;
       line-height: 1.6;
     }
 
-    /* Center container and constrain width */
     .container {
       max-width: 680px;
       margin: 0 auto;
       padding: 1.5rem 1rem;
     }
 
-    /* Header: site title on left, nav links on right */
     header {
       display: flex;
       justify-content: space-between;
@@ -54,11 +46,11 @@
       color: #0366d6;
       font-weight: 500;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
 
-    /* ===== Updated Intro Section ===== */
     .intro-section {
       display: flex;
       align-items: flex-start;
@@ -86,11 +78,11 @@
       text-decoration: none;
       font-weight: 500;
     }
+
     .intro a:hover {
       text-decoration: underline;
     }
 
-    /* Section headings (e.g., Papers) */
     h2 {
       margin-top: 2rem;
       margin-bottom: 0.75rem;
@@ -100,24 +92,33 @@
       padding-bottom: 0.25rem;
     }
 
-    /* Lists of items (papers, etc.) */
     ul.pub-list {
       list-style: none;
       padding-left: 0;
     }
-    ul.pub-list li {
-      margin-bottom: 0.7rem;
+
+    ul.pub-list > li {
+      margin-bottom: 1.75rem;
       font-size: 0.95rem;
     }
+
     ul.pub-list li a {
       color: #0366d6;
       text-decoration: none;
     }
+
     ul.pub-list li a:hover {
       text-decoration: underline;
     }
 
-    /* Footer */
+    .authors {
+      margin-top: 0.25rem;
+    }
+
+    .links-line {
+      margin-top: 0.3rem;
+    }
+
     footer {
       margin-top: 3rem;
       padding-top: 1rem;
@@ -126,16 +127,18 @@
       color: #555;
       text-align: center;
     }
+
     footer a {
       color: #0366d6;
       text-decoration: none;
       margin-left: 0.5rem;
       vertical-align: middle;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
-    /* X‐icon styling */
+
     .x-icon {
       width: 20px;
       height: 20px;
@@ -147,18 +150,14 @@
 
 <body>
   <div class="container">
-    <!-- ===== Header with name on left, “Home | CV” on right ===== -->
     <header>
       <h1>Felix Samy Soliman</h1>
       <nav>
-        <!-- Since this is a single‐page site, “Home” just links to “#” -->
         <a href="#">Home</a>
-        <!-- Link directly to your CV PDF -->
         <a href="cv_samysoliman.pdf" target="_blank">CV</a>
       </nav>
     </header>
 
-    <!-- ===== Intro section with headshot on the left ===== -->
     <div class="intro-section">
       <img
         src="headshot.jpg"
@@ -166,119 +165,171 @@
         class="headshot"
       />
       <div class="intro">
-      <p>
-        I am a Postdoc at Stanford GSB.
-        My research focuses on macroeconomics, environmental economics, and trade.
-        <br /><br />
-        I will join the University of Warwick starting as an Assistant Professor of Economics (AY2027/2028).
-        <br /><br />
-        You can download my CV
-        <a href="cv_samysoliman.pdf" target="_blank">here</a>. Feel free to
-        reach me at 
-        <a href="mailto:fsoliman@stanford.edu">fsoliman@stanford.edu</a>.
-      </p>
+        <p>
+          I am a Postdoc at Stanford GSB.
+          My research focuses on macroeconomics, environmental economics, and trade.
+          <br /><br />
+          I will join the University of Warwick starting as an Assistant Professor of Economics (AY2027/2028).
+          <br /><br />
+          You can download my CV
+          <a href="cv_samysoliman.pdf" target="_blank">here</a>.
+          Feel free to reach me at
+          <a href="mailto:fsoliman@stanford.edu">fsoliman@stanford.edu</a>.
+        </p>
       </div>
     </div>
 
-<h2>Working Papers</h2>
-<ul class="pub-list">
-  <li class="paper-item">
-    Capital Replacement and the Demand for Clean Technology – 2026
-    <div class="links-line">
-      <a href="JMP_FSS_revised.pdf" target="_blank" rel="noopener">PDF</a>
-      <span> | <strong>Revised JMP</strong>
-      <details class="abs-toggle">
-        <summary>Abstract</summary>
-        <div class="abstract-content">
-          <p>
-            <!-- Add your JMP abstract here -->
-            I study how capital replacement shapes green technology adoption and innovation. Empirically, industries
-with more durable capital exhibit weaker green innovation and energy efficiency responses to energy
-price increases. A calibrated integrated assessment model combining vintage capital and endogenous innovation
-shows that limited adoption and innovation constrain substitution away from fossil fuels, making
-near term decarbonization more reliant on reductions in capital. When firms can instead adopt electric
-machinery, climate policy can effectively redirect investment towards cleaner equipment. Whether capital
-replacement constrains the green transition therefore depends on the availability of clean technologies and
-how policy affects equipment demand.
-          </p>
+    <h2>Working Papers</h2>
+
+    <ul class="pub-list">
+      <li class="paper-item">
+        Capital Replacement and the Demand for Clean Technology – 2026
+        <div class="links-line">
+          <a href="JMP_FSS_revised.pdf" target="_blank" rel="noopener">PDF</a>
+          <span> | <strong>Revised JMP</strong></span>
+
+          <details class="abs-toggle">
+            <summary>Abstract</summary>
+            <div class="abstract-content">
+              <p>
+                I study how capital replacement shapes green technology adoption
+                and innovation. Empirically, industries with more durable capital
+                exhibit weaker green innovation and energy efficiency responses
+                to energy price increases. A calibrated integrated assessment
+                model combining vintage capital and endogenous innovation shows
+                that limited adoption and innovation constrain substitution away
+                from fossil fuels, making near term decarbonization more reliant
+                on reductions in capital. When firms can instead adopt electric
+                machinery, climate policy can effectively redirect investment
+                towards cleaner equipment. Whether capital replacement constrains
+                the green transition therefore depends on the availability of
+                clean technologies and how policy affects equipment demand.
+              </p>
+            </div>
+          </details>
         </div>
-      </details>
-    </div>
-  </li>
-</ul>
+      </li>
 
+      <li class="paper-item">
+        Slack and Economic Development – 2025
 
-  
-  <li class="paper-item">
-    Slack and Economic Development – 2025
-    <div class="authors">
-      joint with
-      <a href="https://www.michaelwwalker.me/" target="_blank">Michael W. Walker</a>,
-      <a href="https://www.nber.org/people/nachiket_shah?page=1&amp;perPage=50" target="_blank">Nachiket Shah</a>,
-      <a href="https://emiguel.econ.berkeley.edu/" target="_blank">Edward Miguel</a>,
-      <a href="https://www.dennisegger.net/" target="_blank">Dennis Egger</a>, and
-      <a href="https://tilmangraff.github.io/" target="_blank">Tilman Graff</a>
-    </div>
-    <div class="links-line">
-      <a href="https://www.nber.org/papers/w33055" target="_blank" rel="noopener">PDF</a>
-      <span> | <strong>Reject &amp; Resubmit Journal of Political Economy</strong>
-      <details class="abs-toggle">
-        <summary>Abstract</summary>
-        <div class="abstract-content">
-          <p>
-            <!-- Add abstract text -->
-            Slack – the underutilization of factors of production – varies systematically with economic development. Using novel firm-level measures from Kenya, we show that utilization is increasing in firm size and market access. We present a model where indivisibility of inputs leads to endogenous steady-state slack and elastic aggregate
-supply. We empirically validate model predictions against the general equilibrium effects of cash transfers from a large-scale RCT. Consistent with the evidence, the calibrated model predicts a real multiplier of 1.6 and limited in-
-flation. The findings suggest that input indivisibilities and slack are quantitatively important for macroeconomic dynamics in developing countries.
-          </p>
+        <div class="authors">
+          joint with
+          <a href="https://www.michaelwwalker.me/" target="_blank">Michael W. Walker</a>,
+          <a href="https://www.nber.org/people/nachiket_shah?page=1&amp;perPage=50" target="_blank">Nachiket Shah</a>,
+          <a href="https://emiguel.econ.berkeley.edu/" target="_blank">Edward Miguel</a>,
+          <a href="https://www.dennisegger.net/" target="_blank">Dennis Egger</a>,
+          and
+          <a href="https://tilmangraff.github.io/" target="_blank">Tilman Graff</a>
         </div>
-      </details>
-    </div>
-  </li>
 
-  <li class="paper-item">
-    The Geographic Leakages of Environmental Regulations: Evidence from the Clean Air Act – 2025
-    <div class="authors">
-      joint with
-      <a href="https://www.mark-curtis.net/" target="_blank">Mark Curtis</a>,
-      <a href="https://weiting-miao.github.io/" target="_blank">Weiting Miao</a>,
-      <a href="https://jcsuarez.com/" target="_blank">Juan Carlos Suarez Serrato</a>, and
-      <a href="https://sites.google.com/site/yixusite/" target="_blank">Daniel Xu</a>
-    </div>
-    <div class="links-line">
-      <a href="Curtis-Miao-Soliman-Serrato-Xu-compressed.pdf" rel="noopener">PDF</a>
-      <span> | </span>
-      <details class="abs-toggle">
-        <summary>Abstract</summary>
-        <div class="abstract-content">
-          <p>
-            <!-- Add abstract text -->
-            How large is geographic leakage resulting from place-based environmental policy? We study this question in the context of the landmark US Clean Air Act Amendments. Our paper makes three primary contributions. First, using modern event-study tech- niques and confidential US Census data, we revisit seminal results characterizing the effects of this environmental regulation on directly regulated plants and industries. Second, we extend prior research by quantifying leakage to unregulated regions and identifying multi-unit firm networks as a key conduit for this leakage. Third, we in- tegrate these findings into an industry spatial equilibrium model that captures both within-firm and cross-location leakage. The model quantifies the economic cost of the regulation, evaluates the contribution of multi-unit firms to regional leakage, and high- lights the role of the Clean Air Act in redistributing industrial production across the US. Our analysis reveals that approximately 40% of the geographic leakage we observe is driven by within-firm reallocation, highlighting the critical role of multi-unit firms in shifting economic activity across regions.
-          </p>
+        <div class="links-line">
+          <a href="https://www.nber.org/papers/w33055" target="_blank" rel="noopener">PDF</a>
+          <span> | <strong>Reject &amp; Resubmit Journal of Political Economy</strong></span>
+
+          <details class="abs-toggle">
+            <summary>Abstract</summary>
+            <div class="abstract-content">
+              <p>
+                Slack – the underutilization of factors of production – varies
+                systematically with economic development. Using novel firm-level
+                measures from Kenya, we show that utilization is increasing in
+                firm size and market access. We present a model where
+                indivisibility of inputs leads to endogenous steady-state slack
+                and elastic aggregate supply. We empirically validate model
+                predictions against the general equilibrium effects of cash
+                transfers from a large-scale RCT. Consistent with the evidence,
+                the calibrated model predicts a real multiplier of 1.6 and
+                limited inflation. The findings suggest that input indivisibilities
+                and slack are quantitatively important for macroeconomic dynamics
+                in developing countries.
+              </p>
+            </div>
+          </details>
         </div>
-      </details>
-    </div>
-  </li>
-</ul>
+      </li>
 
-<h3>Publications</h3>
-<ul class="pub-list">
-  <li class="paper-item">
-    Democratization, Contracts and Comparative advantage – 2018
-    <div class="authors">joint with Jan Schymik | <strong>Economics Letters</strong> </div>
-    
-    <div class="links-line">
-      <a href="https://www.sciencedirect.com/science/article/pii/S0165176518303847"
-         target="_blank" rel="noopener">PDF</a>
-      <span> 
+      <li class="paper-item">
+        The Geographic Leakages of Environmental Regulations: Evidence from the Clean Air Act – 2025
 
+        <div class="authors">
+          joint with
+          <a href="https://www.mark-curtis.net/" target="_blank">Mark Curtis</a>,
+          <a href="https://weiting-miao.github.io/" target="_blank">Weiting Miao</a>,
+          <a href="https://jcsuarez.com/" target="_blank">Juan Carlos Suarez Serrato</a>,
+          and
+          <a href="https://sites.google.com/site/yixusite/" target="_blank">Daniel Xu</a>
+        </div>
 
-    <!-- ===== Footer ===== -->
+        <div class="links-line">
+          <a href="Curtis-Miao-Soliman-Serrato-Xu-compressed.pdf" rel="noopener">PDF</a>
+          <span> | </span>
+
+          <details class="abs-toggle">
+            <summary>Abstract</summary>
+            <div class="abstract-content">
+              <p>
+                How large is geographic leakage resulting from place-based
+                environmental policy? We study this question in the context of
+                the landmark US Clean Air Act Amendments. Our paper makes three
+                primary contributions. First, using modern event-study techniques
+                and confidential US Census data, we revisit seminal results
+                characterizing the effects of this environmental regulation on
+                directly regulated plants and industries. Second, we extend prior
+                research by quantifying leakage to unregulated regions and
+                identifying multi-unit firm networks as a key conduit for this
+                leakage. Third, we integrate these findings into an industry
+                spatial equilibrium model that captures both within-firm and
+                cross-location leakage. The model quantifies the economic cost
+                of the regulation, evaluates the contribution of multi-unit firms
+                to regional leakage, and highlights the role of the Clean Air
+                Act in redistributing industrial production across the US.
+                Our analysis reveals that approximately 40% of the geographic
+                leakage we observe is driven by within-firm reallocation,
+                highlighting the critical role of multi-unit firms in shifting
+                economic activity across regions.
+              </p>
+            </div>
+          </details>
+        </div>
+      </li>
+    </ul>
+
+    <h2>Publications</h2>
+
+    <ul class="pub-list">
+      <li class="paper-item">
+        Democratization, Contracts and Comparative advantage – 2018
+
+        <div class="authors">
+          joint with Jan Schymik |
+          <strong>Economics Letters</strong>
+        </div>
+
+        <div class="links-line">
+          <a
+            href="https://www.sciencedirect.com/science/article/pii/S0165176518303847"
+            target="_blank"
+            rel="noopener"
+          >PDF</a>
+        </div>
+      </li>
+    </ul>
+
     <footer>
       &copy; 2025 Felix Samy Soliman
       <a href="https://x.com/home" target="_blank" aria-label="X">
-        <svg class="x-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 6 L6 18 M6 6 L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <svg
+          class="x-icon"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 6 L6 18 M6 6 L18 18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
         </svg>
       </a>
     </footer>
